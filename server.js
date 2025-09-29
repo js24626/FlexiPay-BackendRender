@@ -231,17 +231,17 @@ app.get('/agent-amounts/my-amounts', authMiddleware, async (req, res) => {
 // CREATE agent amount (agents can create their own)
 app.post('/agent-amounts', authMiddleware, async (req, res) => {
   try {
-    const { amount, date, username } = req.body
+    const { amount, date, wasoolAmount, bakayaAmount, username } = req.body
     
     if (!amount || !date) {
       return res.status(400).json({ error: 'Amount and date are required' })
     }
-    
+
     await db.read()
-    
+
     let createdByUsername = username
-    
-    // For agents, verify they can only create amounts for themselves
+
+    // Ensure agents can only create their own entries
     if (req.user.role === 'agent') {
       const agent = db.data.agents.find(a => a.id === req.user.id)
       if (!agent) {
@@ -249,24 +249,25 @@ app.post('/agent-amounts', authMiddleware, async (req, res) => {
       }
       createdByUsername = agent.username
     }
-    
+
     const agentAmount = {
       id: nanoid(),
       amount: parseFloat(amount),
+      wasoolAmount: wasoolAmount ? parseFloat(wasoolAmount) : 0, // ✅ now saved
+      bakayaAmount: bakayaAmount ? parseFloat(bakayaAmount) : 0, // ✅ now saved
       date,
       username: createdByUsername,
       createdBy: createdByUsername,
       createdAt: new Date().toISOString(),
-      
     }
-    
+
     if (!db.data.agentAmounts) {
       db.data.agentAmounts = []
     }
-    
+
     db.data.agentAmounts.push(agentAmount)
     await db.write()
-    
+
     res.json(agentAmount)
   } catch (error) {
     console.error('Error creating agent amount:', error)

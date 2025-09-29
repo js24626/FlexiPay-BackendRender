@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "id": "ebszTTx6ASG_hsqDX4nnO",
+      "email": "you@example.com",
+      "password": "$2b$10$jmjKcaz9G28wuG5v.nbM3uK4tyrjLuSvtfRTYPZXX3F8QfBt9aeT.",
+      "role": "admin",
+      "full_name": "Admin",
+      "created_at": "2025-09-22T13:20:00.925Z"
+    }
+  ],
+
+  "agents": [
+    {
+      "id": "P1oOjbba4pbDtTxYHTV5d",
+      "username": "Azan",
+      "email": "azan@gmail.com",
+      "password": "$2b$10$4LxBjSRQ5I1WxJRt2eqGlueyFLfacfI/J.t0XGCOE3ySkCjT4wrbe",
+      "created_at": "2025-09-27T08:45:27.245Z"
+    },
+    {
+      "id": "VWPymiWsa87H72kqT-5V0",
+      "username": "Hassan",
+      "email": "hassan@gmail.com",
+      "password": "$2b$10$tpzrUxqQavs8Hiq4BdXZH.TovmAP0ZDQBdS3RxzVGBIq9kaIzmGRy",
+      "created_at": "2025-09-29T11:47:33.318Z"
+    }
+  ],
+  "agentAmounts": [
+    {
+      "id": "ihOtepzPWmojxekSbfdTK",
+      "amount": 9000,
+      "date": "2025-09-29",
+      "username": "Hassan",
+      "createdBy": "Hassan",
+      "createdAt": "2025-09-29T13:30:52.431Z",
+      "status": "pending"
+    },
+    {
+      "id": "IdNtV-REJbHxx0THT0bs0",
+      "amount": 3800,
+      "date": "2025-09-01",
+      "username": "Hassan",
+      "createdBy": "Hassan",
+      "createdAt": "2025-09-29T14:09:43.857Z",
+      "status": "pending"
+    },
+    {
+      "id": "rWc8Y9G1HArVWUEV5tHkz",
+      "amount": 2100,
+      "date": "2025-09-05",
+      "username": "Hassan",
+      "createdBy": "Hassan",
+      "createdAt": "2025-09-29T14:10:08.985Z",
+      "status": "pending"
+    },
+    {
+      "id": "rNdlW6VOfPOt-gRD-F439",
+      "amount": 5400,
+      "date": "2025-09-05",
+      "username": "Hassan",
+      "createdBy": "Hassan",
+      "createdAt": "2025-09-29T14:10:29.865Z",
+      "status": "pending"
+    },
+    {
+      "id": "CpiHaboGxACZDfoKjqPG9",
+      "amount": 1000,
+      "date": "2025-09-23",
+      "username": "Azan",
+      "createdBy": "Azan",
+      "createdAt": "2025-09-29T14:11:09.990Z",
+      "status": "pending"
+    },
+    {
+      "id": "FYqo2cje0TDr3G34jFDpz",
+      "amount": 655,
+      "date": "2025-09-04",
+      "username": "Azan",
+      "createdBy": "Azan",
+      "createdAt": "2025-09-29T14:11:20.144Z",
+      "status": "pending"
+    }
+  ]
+}
